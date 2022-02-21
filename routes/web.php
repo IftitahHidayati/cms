@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// nomor 1
+Route::get('/', function () {
+    echo "Selamat Datang";
+});
+
+//nomor 2
+Route::get('/about', function () {
+    echo "2041720006 <br>";
+    echo "Iftitah Hidayati <br>";
+    echo "TI 2H";
+});
+
+//nomor 3
+Route::get('/articles/{id}', function ($id) {
+    echo "Ini adalah halaman artikel dengan ID: ".$id;
+});
