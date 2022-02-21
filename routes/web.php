@@ -5,6 +5,9 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Praktikum3\HomeController as UtamaController;
+use App\Http\Controllers\Praktikum3\AboutUsController as AboutUsController;
+use App\Http\Controllers\Praktikum3\NewsController as NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +19,9 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 // PRAKTIKUM 1
 // // nomor 1
 // Route::get('/', function () {
@@ -39,8 +42,15 @@ Route::get('/', function () {
 
 // PRAKTIKUM 2
 // nomor 1
-Route::get('/', [HomeController::class, 'index']);
-// nomor 2
-Route::get('/about', [AboutController::class, 'about']);
-// nomor 3
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// Route::get('/', [HomeController::class, 'index']);
+// // nomor 2
+// Route::get('/about', [AboutController::class, 'about']);
+// // nomor 3
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+// PRAKTIKUM 3
+Route::get('/', [UtamaController::class, 'index']);
+Route::get('/about', [AboutUsController::class, 'about']);
+Route::get('/news/{id}', [NewsController::class, 'news']);
+// Route::prefix('admin')->group(function () {   
+// Route::get('/users', function () {         // Matches The "/admin/users" URL     }); }); 
