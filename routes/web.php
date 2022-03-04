@@ -19,9 +19,9 @@ use App\Http\Controllers\Praktikum3\NewsController as NewsController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/home', function () {
+    return view('home');
+});
 // PRAKTIKUM 1
 // // nomor 1
 // Route::get('/', function () {
@@ -49,8 +49,8 @@ use App\Http\Controllers\Praktikum3\NewsController as NewsController;
 // Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // PRAKTIKUM 3
-Route::get('/', [UtamaController::class, 'index']);
-Route::get('/about', [AboutUsController::class, 'about']);
-Route::get('/news/{id}', [NewsController::class, 'news']);
+// Route::get('/', [UtamaController::class, 'index']);
+// Route::get('/about', [AboutUsController::class, 'about']);
+// Route::get('/news/{id}', [NewsController::class, 'news']);
 // Route::prefix('admin')->group(function () {   
 // Route::get('/users', function () {         // Matches The "/admin/users" URL     }); }); 
