@@ -54,3 +54,6 @@ Route::get('/home', function () {
 // Route::get('/news/{id}', [NewsController::class, 'news']);
 // Route::prefix('admin')->group(function () {   
 // Route::get('/users', function () {         // Matches The "/admin/users" URL     }); }); 
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
