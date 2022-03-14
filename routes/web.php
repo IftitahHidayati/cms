@@ -8,6 +8,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Praktikum3\HomeController as UtamaController;
 use App\Http\Controllers\Praktikum3\AboutUsController as AboutUsController;
 use App\Http\Controllers\Praktikum3\NewsController as NewsController;
+use App\Http\Controllers\ProductsController as ProductsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +20,11 @@ use App\Http\Controllers\Praktikum3\NewsController as NewsController;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [ProductsController::class, 'index']);
+
+// Route::get('/home', function () {
+//     return view('home');
+// });
 // PRAKTIKUM 1
 // // nomor 1
 // Route::get('/', function () {
