@@ -20,7 +20,7 @@ use App\Http\Controllers\ProductsController as ProductsController;
 |
 */
 
-Route::get('/home', [ProductsController::class, 'index']);
+// Route::get('/home', [ProductsController::class, 'index']);
 
 // Route::get('/home', function () {
 //     return view('home');
@@ -57,6 +57,10 @@ Route::get('/home', [ProductsController::class, 'index']);
 // Route::get('/news/{id}', [NewsController::class, 'news']);
 // Route::prefix('admin')->group(function () {   
 // Route::get('/users', function () {         // Matches The "/admin/users" URL     }); }); 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
