@@ -9,6 +9,7 @@ use App\Http\Controllers\Praktikum3\HomeController as UtamaController;
 use App\Http\Controllers\Praktikum3\AboutUsController as AboutUsController;
 use App\Http\Controllers\Praktikum3\NewsController as NewsController;
 use App\Http\Controllers\ProductsController as ProductsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,6 +44,7 @@ use App\Http\Controllers\ProductsController as ProductsController;
 //     echo "Ini adalah halaman artikel dengan ID: ".$id;
 // });
 
+
 // PRAKTIKUM 2
 // nomor 1
 // Route::get('/', [HomeController::class, 'index']);
@@ -60,7 +62,7 @@ use App\Http\Controllers\ProductsController as ProductsController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::resource('articles', ArticleController::class);
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
